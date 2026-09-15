@@ -1,0 +1,9 @@
+# Runtime files that accumulate in a plugin directory on a live server and
+# are not source. lh-github-publisher pushes this directory with `git add -A`
+# and has no exclusion mechanism of its own, so anything sitting here is
+# committed. PHP writes error_log into whichever directory the running
+# script lives in, so it reappears on its own after any deletion - ignoring
+# it is the only durable fix, not deleting it.
+error_log
+*.log
+.DS_Store
